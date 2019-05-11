@@ -21,8 +21,10 @@ restService.post("/echo", function(req, res) {
       ? req.body.result.parameters.echoText
       : "Seems like some problem. Speak again.";
   return res.json({
-    speech: speech + app.getUser().userId,
-    displayText: speech + app.getUser().userId,
+    const userId = conv.user.profile.payload.sub;
+
+    speech: speech + userId,
+    displayText: speech + userId,
     source: "webhook-echo-sample"
   });
 });

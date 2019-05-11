@@ -23,8 +23,8 @@ restService.post("/echo", function(req, res) {
   return res.json({
     const userId = app.getUser().userId;
 
-    speech: speech + userId,
-    displayText: speech + userId,
+    speech: speech + ' From Api ',
+    displayText: speech + ' From Api ',
     source: "webhook-echo-sample"
   });
 });

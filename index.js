@@ -21,7 +21,7 @@ restService.post("/echo", function(req, res) {
       ? req.body.result.parameters.echoText
       : "Seems like some problem. Speak again.";
   return res.json({
-    const userId = conv.user.profile.payload.sub;
+    const userId = app.getUser().userId;
 
     speech: speech + userId,
     displayText: speech + userId,

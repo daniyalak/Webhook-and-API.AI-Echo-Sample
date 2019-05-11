@@ -21,8 +21,7 @@ restService.post("/echo", function(req, res) {
       ? req.body.result.parameters.echoText
       : "Seems like some problem. Speak again.";
   return res.json({
-    const userId = app.getUser().userId;
-
+   
     speech: speech + ' From Api ',
     displayText: speech + ' From Api ',
     source: "webhook-echo-sample"
